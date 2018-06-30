@@ -8,7 +8,7 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private durations: any[] = [
+  public durations: any[] = [
     { value: '30', view: '\u2264 30min' },
     { value: '60', view: '\u2264 1h' },
     { value: '90', view: '\u2264 1h30min' },
@@ -19,17 +19,17 @@ export class AppComponent implements OnInit {
     { value: '240', view: '\u2264 4h' },
     { value: '999', view: '\u003E 4h' }
   ];
-  private genres: string[] = ['Action', 'Adventure', 'Children/Family', 'Comedy', 'Crime', 'Drama', 'Epic',
+  public genres: string[] = ['Action', 'Adventure', 'Children/Family', 'Comedy', 'Crime', 'Drama', 'Epic',
     'Fantasy', 'Historical', 'Horror', 'Musical', 'Mystery', 'Romance', 'Science Fiction', 'Spy', 'Thriller', 'War', 'Western'];
 
   // SEARCH PARAMETERS
-  private title: string;
-  private director: string;
+  public title: string;
+  public director: string;
   // tslint:disable-next-line:no-inferrable-types
-  private genre: string = 'Drama';
-  private cast: string;
+  public genre: string = 'Drama';
+  public cast: string;
   // tslint:disable-next-line:no-inferrable-types
-  private duration: number = 150;
+  public duration: number = 150;
 
   ngOnInit(): void {
   }
