@@ -6,5 +6,52 @@
 </div>
 <div class="container">
   <div class="jumbotron">
+    <form action="#">
+      <div class="form-group row">
+        <label for="title" class="col-2">Title</label>
+        <div class="col-10">
+          <input id="title" type="text" class="form-control" placeholder="Fight Club" name="title" [(ngModel)]="title" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="director" class="col-2">Director</label>
+        <div class="col-10">
+          <input id="director" type="text" class="form-control" placeholder="David Fincher" name="director" [(ngModel)]="director"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="cast" class="col-2">Cast</label>
+        <div class="col-10">
+          <input id="cast" type="text" class="form-control" placeholder="Edward Norton" name="cast" [(ngModel)]="cast" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="genre" class="col-2">Genre</label>
+        <div class="col-10">
+          <select id="genre" name="genre" [(ngModel)]="genre">
+            <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="duration" class="col-2">Duration</label>
+        <div class="col-10">
+          <select id="duration" name="duration" [(ngModel)]="duration">
+            <option *ngFor="let duration of durations" [value]="duration.value">{{ duration.view }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="center">
+          <button class="btn btn-primary" type="submit">Search
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="ranking">
   </div>
 </div>
